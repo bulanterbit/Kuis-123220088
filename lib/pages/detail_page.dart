@@ -97,7 +97,7 @@ class _DetailPageState extends State<DetailPage> {
                     children: widget.clothes.sizes.map((size) {
                       return Chip(
                         label: Text(size),
-                        backgroundColor: Colors.blue[100],
+                        backgroundColor: Colors.white,
                       );
                     }).toList(),
                   ),
@@ -114,7 +114,7 @@ class _DetailPageState extends State<DetailPage> {
                     children: widget.clothes.colors.map((color) {
                       return Chip(
                         label: Text(color),
-                        backgroundColor: Colors.green[100],
+                        backgroundColor: Colors.white,
                       );
                     }).toList(),
                   ),
@@ -127,15 +127,14 @@ class _DetailPageState extends State<DetailPage> {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          // Add to cart instead of favorite
           ScaffoldMessenger.of(context).showSnackBar(
             SnackBar(
               content: Text('Menambah ${widget.clothes.name} ke keranjang'),
-              duration: const Duration(seconds: 2),
             ),
           );
         },
-        child: const Icon(Icons.shopping_cart),
+        child: const Icon(Icons.add_shopping_cart),
+        foregroundColor: Colors.orangeAccent,
       ),
     );
   }
