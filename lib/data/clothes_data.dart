@@ -1,4 +1,4 @@
-import '../model/clothes_model.dart';
+import '../models/clothes_model.dart';
 
 List<ClothesModel> clothesList = [
   ClothesModel(
